@@ -1,0 +1,6 @@
+{
+  "name": "GEODAR",
+  "description": "AI-powered geospatial intelligence platform for monitoring, analyzing, prioritizing, and predicting public infrastructure problems in Indian cities.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

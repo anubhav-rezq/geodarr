@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #27187E;
+    --primary-dark: #1B105A;
+    --primary-900: #27187E;
+    --primary-800: #35248F;
+    --primary-700: #4937A3;
+    --primary-600: #5D4CB7;
+    --primary-500: #7567C7;
+    --primary-400: #8E82D5;
+    --primary-300: #A9A0E2;
+    --primary-200: #C5C0EF;
+    --primary-100: #DEDDF7;
+    --primary-50: #ECEBFC;
+    --bg-page: #F7F7FF;
+    --neutral-dark: #17172A;
+    --neutral-gray: #64647A;
+    --neutral-border: #E5E4F0;
+    --status-low: #22C55E;
+    --status-medium: #F59E0B;
+    --status-high: #F97316;
+    --status-critical: #DC2626;
+  }
+
+  body {
+    background-color: #F7F7FF;
+    color: #17172A;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom GIS & Editorial Utility Classes */
+.bg-geodar-primary {
+  background-color: #27187E;
+}
+
+.text-geodar-primary {
+  color: #27187E;
+}
+
+.border-geodar-primary {
+  border-color: #27187E;
+}
+
+.bg-geodar-dark {
+  background-color: #1B105A;
+}
+
+.bg-geodar-canvas {
+  background-color: #F7F7FF;
+}
+
+.bg-geodar-50 {
+  background-color: #ECEBFC;
+}
+
+.bg-geodar-100 {
+  background-color: #DEDDF7;
+}
+
+.text-geodar-dark {
+  color: #17172A;
+}
+
+.text-geodar-muted {
+  color: #64647A;
+}
+
+.border-geodar-border {
+  border-color: #E5E4F0;
+}
+
+/* Editorial Dot Grid background */
+.editorial-dot-grid {
+  background-image: radial-gradient(#27187E 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}
+
+.editorial-dot-grid-subtle {
+  background-image: radial-gradient(rgba(39, 24, 126, 0.15) 0.6px, transparent 0.6px);
+  background-size: 16px 16px;
+}
+
+.editorial-dark-dot-grid {
+  background-image: radial-gradient(rgba(169, 160, 226, 0.25) 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}
+
+/* GIS Grid background */
+.gis-grid-pattern {
+  background-image: linear-gradient(to right, rgba(39, 24, 126, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(39, 24, 126, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.gis-dark-grid-pattern {
+  background-image: linear-gradient(to right, rgba(169, 160, 226, 0.08) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(169, 160, 226, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Radar Scan Line Keyframe */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 96%;
+    opacity: 0.9;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+.animate-laser-scan {
+  animation: laserScan 2.4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+/* Custom refined scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F7FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5C0EF;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8E82D5;
+}
